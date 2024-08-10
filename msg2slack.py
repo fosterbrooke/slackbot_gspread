@@ -10,12 +10,12 @@ creds = ServiceAccountCredentials.from_json_keyfile_name('./credential.json', sc
 client = gspread.authorize(creds)
 
 # Open the Google Sheet by ID and get the data
-spreadsheet_id = '1XkD01mutrZtemL4I5wQWqtPKhl-k5ugCkszf9XYObSY'
+spreadsheet_id = ''
 sheet = client.open_by_key(spreadsheet_id).sheet1
 slack_ids = sheet.col_values(1)  # Assumes Slack IDs are in the first column
 
 # Setup the Slack client
-slack_token = 'xoxb-6252476882098-7543158897207-baYMvEKBmLJzYALdJEKcYRig'
+slack_token = ''
 client = WebClient(token=slack_token)
 
 # Define your custom message
